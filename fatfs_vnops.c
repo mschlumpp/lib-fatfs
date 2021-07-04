@@ -187,7 +187,7 @@ fatfs_lookup(struct vnode *dvp, char *name, struct vnode **vpp)
 }
 
 static int
-fatfs_read(struct vnode *vp, struct vfscore_file *fp, struct uio *uio,
+fatfs_read(struct vnode *vp, struct vfscore_file *fp __unused, struct uio *uio,
 	   int ioflag __unused)
 {
 	struct fatfsmount *fmp;
