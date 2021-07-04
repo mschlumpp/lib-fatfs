@@ -199,7 +199,7 @@ fatfs_read(struct vnode *vp, struct vfscore_file *fp, struct uio *uio,
 	struct fatfs_node *np;
 	void *buf;
 
-	DPRINTF(("fatfs_read: vp=%x\n", vp));
+	DPRINTF(("fatfs_read: vp=%p\n", vp));
 
 	fmp = vp->v_mount->m_data;
 
@@ -289,7 +289,7 @@ fatfs_write(struct vnode *vp, struct uio *uio, int ioflag __unused)
 	__u32 file_pos, end_pos;
 	__u32 cl;
 
-	DPRINTF(("fatfs_write: vp=%x\n", vp));
+	DPRINTF(("fatfs_write: vp=%p\n", vp));
 
 	fmp = vp->v_mount->m_data;
 	np = vp->v_data;
